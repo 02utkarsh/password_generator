@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style >
+        /* .reds{
+            background-color: aqua;
+        } */
+    </style>
+</head>
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div class="border w-[22%] mx-auto p-5 rounded-xl flex flex-col justify-evenly gap-6 mt-28">
+        <h1 class="mx-auto text-2xl font-bold font-serif text-neutral-700">Password Generator</h1>
+        <div class="display-container mx-auto flex gap-2">            
+            <input readonly placeholder="Password" class="Display bg-sky-600 w-[100%] h-8 rounded place-content-center" data-passwordDisplay>
+            <button class="" data-copy >
+                <span datacopymsg></span>
+                <img class="rounded-full" src="https://w7.pngwing.com/pngs/232/288/png-transparent-computer-icons-symbol-cut-copy-and-paste-symbol-miscellaneous-text-multiple-thumbnail.png" height="23" width="23">
+            </button>
+        </div>
+
+        <!--2nd box content se-->
+        <div class="rightcontent ">
+            <div class="passwordlen flex justify-between my-1">
+                <p class="text-xl font-semibold">Password Length</p>
+                <div class="text-xl font-semibold" data-lenNumber>0</div>
+            </div>
+            <input type="range" min="5" max="18" value="" class="slider " step="1" datalenslider>
+            
+            <div class="my-1">
+                <input type="checkbox"  id="uppercaseselector" class=" bg-slate-300">
+                <label for="upperCaseLetter" class="text-lg text-blue-950 font-semibold"> Includes upper case letter</label>
+           </div>
+
+           <div class="my-1">
+            <input type="checkbox"  id="lowercaseselector">
+            <label for="lowerCaseLetter" class="text-lg text-blue-950 font-semibold"> Includes lower case letter</label>
+           </div> 
+
+           <div class="my-1">
+            <input type="checkbox"  id="symbolselector">
+            <label for="symbolselectorss" class="text-lg text-blue-950 font-semibold"> Includes symbols</label>
+           </div>
+
+           <div class="my-1">
+            <input type="checkbox"  id="numberselector">
+            <label for="numberselectors" class="text-lg text-blue-950 font-semibold"> Includes Numbers</label>
+           </div>
+        
+           <div class=" strengthcontainer flex justify-between my-1">
+            <p class=" text-[22px] font-bold">Strength</p>
+            <div class="mt-2 strength-color w-4 h-4 rounded-full bg-red-600 shadow-[15px]" data-indicator></div>
+           </div>
+        <!--submiting button  -->
+           <button class="w-[80%] border rounded-[5px] bg-orange-300 ml-5 hover:scale-105 duration-75 font-semibold" genbtn >GENERATE PASSWORD</button>
+        </div>
+    </div>
+    <script src="index.js"></script> 
+    </body>
+</html>
